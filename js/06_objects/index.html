@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ДЗ 6</title>
+  <script src="main.js"></script>
+</head>
+
+<body>
+
+  <script>
+    'use strict';
+    // Задание
+    // Напишите функцию, фильтрующую массив объектов по значению свойства.Массив, название свойства и нужное значение должны передаваться в качестве аргументов.Пример использования:
+
+    let objects = [
+      { name: 'Василий', surname: 'Васильев' },
+      { name: 'Иван', surname: 'Иванов' },
+      { name: 'Пётр', surname: 'Петров' }
+    ]
+
+    let NewObject = [];
+    //  Вариант 1
+    // function ArrFilter(objects, property, value) {
+    //   for (let i = 0; i < objects.length; i++) {
+    //     if (objects[i][property] === value) {
+    //       NewObject.push(objects[i]);
+    //     }
+    //   }
+    //   return NewObject;
+    // }
+
+    // console.log(ArrFilter(objects, 'name', 'Иван'));
+
+    //  Вариант 2 с filter
+    const result = objects.filter(function (obj) {
+      return obj.name === 'Иван';
+    });
+
+    console.log(result);
+
+    // Задание 2.
+    // Цель задания
+    // Научиться преобразовывать объекты в другие сущности. Получить базовые навыки для создания и размещения на странице DOM-элементов.
+    let selectObj = [
+      { value: 'junior', label: 'junior-front' },
+      { value: 'middle', label: 'middle-front' },
+      { value: 'senior', label: 'senior-front' },
+    ];
+    let arr = [1, 2, 'три', 'четыре'];
+    let obj = { value1: 'Значение 1', value2: 'Значение 2' }
+
+    document.body.append(createSelect(selectObj, 'middle'));
+    document.body.append(createSelect(obj));
+    document.body.append(createSelect(arr));
+
+  </script>
+
+</body>
+
+</html>

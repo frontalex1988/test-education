@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    'use strict';
+
+    // Задание 1
+    // Цель задания
+    // Научиться генерировать произвольные массивы.Научиться адаптировать существующий код под ситуацию.
+
+    let n = -3;
+    let m = -10;
+    let count = 42;
+    let array = [];
+
+    let min = Math.min(n, m);
+    let max = Math.max(n, m);
+
+    // N1
+    // while (count > 0) {
+    //   array.push(Math.round(Math.random() * (max - min) + min));
+    //   count--;
+    // }
+
+    // N2
+    for (let index = 0; index < count; index++) {
+      array.push(Math.round(Math.random() * (max - min) + min));
+    }
+
+    console.log(array);
+
+
+    // Задание 2
+    // Цель задания
+    // Научиться обрабатывать строки как массивы.
+    let str = 'Привет мир!';
+    let reverseStr = '';
+    let reverseStrArray = '';
+
+    // Через цикл
+    for (let i = str.length - 1; i >= 0; i--) {
+      reverseStr += str[i];
+    }
+
+    console.log(`Задание №2 - ${reverseStr}`);
+
+    // через массив
+    reverseStrArray = str.split('').reverse().join('');
+    console.log(`Задание №2 - ${reverseStrArray}`);
+
+
+    // Задание 3
+    // Цель задания
+    // Научиться корректно переводить требования к сложному заданию в код(необязательно сложный).Соединить знания о boolean, массивах и циклах.
+
+    let roadMines = [true, false, false, false, false, false, false, false, false, true];
+    let position = 0;
+    let damage = 0;
+
+    for (let i = 0; i < roadMines.length; i++) {
+      position += 1;
+      console.log(`танк переместился на позицию ${position}`);
+      if (roadMines[i] === true) {
+        damage += 1;
+        if (damage == 2) {
+          console.log(`Танк уничтожен`);
+          break;
+        }
+        console.log(`Танк повреждён`);
+      }
+    }
+
+    // Задание 4
+    // Цель задания
+    // Научиться работать одновременно с несколькими массивами.Познакомиться с реальным практическим примером применения массивов и циклов в приложениях(слайдер дней календаря, планировщик и т.п.).Соединить знания о массивах, циклах, строках и математических операциях.
+
+    let arrNum = [];
+    let arrDays = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+
+    for (let index = 1; index <= 31; index++) {
+      arrNum.push(index);
+      console.log(`${index} января, ${arrDays[index % 7]}`)
+    }
+
+  </script>
+</body>
+
+</html>

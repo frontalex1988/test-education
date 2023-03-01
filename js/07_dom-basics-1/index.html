@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<style>
+
+
+</style>
+
+<body>
+
+  <!-- Задание 1. -->
+  <input type="text" id="num" placeholder="Введите число" value="5"> <br><br>
+  <input type="submit" id="button" value="Запустить таймер"><br><br>
+  <div class="divNumber">0</div>
+
+  <script>
+
+    // Задание 1.
+    let timerButton = document.getElementById('button');
+    let divNumber = document.querySelector('.divNumber');
+    let number = document.getElementById('num');
+    let numb = number.value;
+
+    timerButton.addEventListener('click', start);
+    let timeId = window.setInterval(timer, 1000);
+
+    function start() {
+      // stop();
+      divNumber.innerHTML = number.value;
+      if (timeId) {
+        divNumber.innerHTML = divNumber.innerHTML;
+      }
+    }
+
+    function stop() {
+      clearInterval(timeId);
+    }
+
+    function timer() {
+      let num = parseInt(divNumber.innerHTML) - 1;
+
+      if (num >= 0) {
+        divNumber.innerHTML = num;
+      } else {
+        stop();
+      }
+    }
+
+  </script>
+
+  <script>
+
+    // Задание 2.
+    let time2Id = window.setInterval(setTimeout, 300);
+    let text_2 = document.createElement('input');
+    text_2.textContent = 'Поле для ввода';
+    text_2.style.cssText = 'margin-top: 40px;';
+    document.body.append(text_2);
+
+    let h2 = document.createElement('h2');
+    h2.style.cssText = 'margin-top: 20px;';
+    document.body.append(h2);
+
+    text_2.addEventListener('input', start);
+
+    function start() {
+      clearTimeout(time2Id);
+      time2Id = setInterval(setTimeout, 300);
+    }
+
+    function setTimeout() {
+      h2.textContent = text_2.value;
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>

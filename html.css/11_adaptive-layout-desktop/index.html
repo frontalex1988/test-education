@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>ДЗ 11 (Евклид)</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header__container">
+
+      <button class="btn-burger">
+        <span class="btn-burger__line"></span>
+        <span class="btn-burger__line"></span>
+        <span class="btn-burger__line"></span>
+      </button>
+
+      <picture>
+        <source srcset="img/Логотип-1024.png" media="(min-width:321px) and (max-width:1024px)">
+        <source srcset="img/Логотип_small.png" media="(max-width:321px)">
+        <img src="img/Логотип.png" alt="logo" class="logo">
+      </picture>
+
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Проекты</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Этапы</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Отзывы</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Контакты</a></li>
+      </ul>
+
+      <a href="#" class="search__link">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="19.5138" y="18.5495" width="8" height="2" transform="rotate(45 19.5138 18.5495)" fill="#333333" />
+          <circle cx="11.5" cy="11.5" r="10.5" stroke="#333333" stroke-width="2" />
+        </svg>
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="section-main">
+      <div class="container main-container">
+        <div class="section-main-container">
+          <h1 class="section-main-heading">Проектные решения любой сложности</h1>
+          <p class="section-main-lead"> Есть над чем задуматься: базовые сценарии поведения пользователей
+            и&nbsp;по&nbsp;сей день остаются уделом
+            проектантов</p>
+
+          <!-- <div class="swiper-container section-main__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image: url('');"></div>
+              <div class="swiper-slide" style="background-image: url('');"></div>
+              <div class="swiper-slide" style="background-image: url('');"></div>
+            </div>
+          </div> -->
+          <a href="#" class="btn section-main-btn">Заказать расчёт </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-about">
+      <div class="container">
+
+        <h2 class="section-heading section-heading-about">О нас</h2>
+        <p class="section-description section-about__description">
+          Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда
+          внеочередных мероприятий с&nbsp;учётом комплекса экспериментов, поражающих по&nbsp;своей масштабности
+          и грандиозности. А&nbsp;также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены
+          отталкиваться от&nbsp;того, что убеждённость некоторых оппонентов требует от&nbsp;нас анализа как
+          самодостаточных, так и&nbsp;внешне зависимых концептуальных решений! Следует отметить, что высококачественный
+          прототип <a href="#" class=""><span class="section-tultip"></span></a> будущего проекта предопределяет высокую
+          востребованность позиций, занимаемых участниками в&nbsp;отношении поставленных задач. Мы&nbsp;вынуждены
+          отталкиваться от&nbsp;того, что высококачественный прототип будущего проекта способствует повышению качества
+          экспериментов.
+        </p>
+
+        <section class="section-blockquote">
+
+          <div class="section-blockquote__left">
+            <div class="section-blockquote-bottom-block">
+              <p class="section-blockquote-bottom-block__desc">
+                Принимая во&nbsp;внимание показатели успешности, перспективное планирование способствует подготовке
+                и&nbsp;реализации новых принципов.
+              </p>
+              <a href="#" class="btn section-blockquote-bottom-block-btn">
+                Подробнее
+              </a>
+            </div>
+          </div>
+
+          <div class="section-blockquote__right">
+
+            <div class="section-quote-block">
+              <img src="img/package.svg" alt="фото кубика"
+                class="section-quote-block__photo section-quote-block__photo-1">
+              <div class="section-quote-block-right">
+                <h3 class="section-subtitle">
+                  Консультация с широким активом
+                </h3>
+                <p class="section-description section-quote-description">
+                  А&nbsp;также свежий взгляд на&nbsp;привычные вещи&nbsp;&mdash; безусловно открывает новые горизонты
+                  для как самодостаточных, так и&nbsp;внешне зависимых концептуальных решений.
+                </p>
+              </div>
+            </div>
+
+            <div class="section-quote-block">
+              <img src="img/setting.svg" alt="фото шестерёнки"
+                class="section-quote-block__photo section-quote-block__photo-2">
+              <div class="section-quote-block-right">
+                <h3 class="section-subtitle">
+                  В своём стремлении повысить
+                </h3>
+                <p class="section-description section-quote-description">
+                  Качество жизни, они забывают, что сплочённость команды профессионалов представляет собой интересный
+                  эксперимент проверки прогресса профессионального сообщества.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+    </section>
+
+    <section class="section-how-we-work">
+      <div class="container">
+
+        <h2 class="section-heading section-heading-work"> Как мы работаем</h2>
+
+        <ul class="section-how-we-work-list">
+          <li class="section-how-we-work-item">
+            <a href="#" class="section-how-we-work-link section-how-we-work-link-active">1 шаг</a>
+          </li>
+          <li class="section-how-we-work-item">
+            <a href="#" class="section-how-we-work-link">2 шаг</a>
+          </li>
+          <li class="section-how-we-work-item">
+            <a href="#" class="section-how-we-work-link">3 шаг</a>
+          </li>
+          <li class="section-how-we-work-item">
+            <a href="#" class="section-how-we-work-link">4 шаг</a>
+          </li>
+        </ul>
+
+        <div class="section-how-we-work-block">
+
+          <div class="section-how-we-work-block__left">
+
+            <h3 class="section-subtitle">Проводим конcультацию</h3>
+            <p class="section-description section-description-how-we-work">
+              Влечет за&nbsp;собой процесс внедрения и модернизации приоритизации разума над эмоциями.
+              В&nbsp;рамках спецификации современных стандартов, некоторые особенности внутренней политики будут
+              объективно рассмотрены соответствующими инстанциями. А также представители современных социальных
+              резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь
+              всего лишь частью общей картины, реплицированные с&nbsp;зарубежных источников, современные исследования
+              подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство,
+              нанотехнологии освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы,
+              разумеется, призваны к&nbsp;ответу.</p>
+
+            <a href="#" class="btn section-more-btn">
+              Подробнее
+            </a>
+            <a href="#" class="btn section-contract-btn">
+              Договор
+            </a>
+
+          </div>
+
+          <div class="section-how-we-work-block__right"></div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-faq">
+      <div class="container">
+
+        <h2 class="section-heading section-faq-heading">Часто задаваемые вопросы</h2>
+        <ul class="acc-list">
+          <li class="acc-item">
+            <h3 class="acc-item__heading">Из чего формируется конечная стоимость проекта?</h3>
+            <span class="acc-item__accord"></span>
+          </li>
+          <li class="acc-item">
+            <h3 class="acc-item__heading acc-item__heading_width">У меня есть свой проект. Сможем ли мы его доработать <span
+                class="acc-item__heading-slash">/</span> реализовать?</h3>
+            <span class="acc-item__accord"></span>
+          </li>
+          <li class="acc-item">
+            <h3 class="acc-item__heading acc-item__heading-width-3">Я выбираю между разными компаниями. В чём ваше отличие?</h3>
+            <span class="acc-item__accord"></span>
+          </li>
+          <li class="acc-item">
+            <h3 class="acc-item__heading">Могу ли я делегировать вам работу <span
+                class="acc-item__heading-slash">/</span>
+              согласование с подрядчиком <span class="acc-item__heading-slash">/</span> организацией? </h3>
+            <span class="acc-item__accord"></span>
+          </li>
+          <li class="acc-item">
+            <h3 class="acc-item__heading">Могу ли я вернуть деньги на каком-либо из этапов работ?</h3>
+            <span class="acc-item__accord"></span>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container footer__container">
+
+      <div class="footer-section-left">
+
+        <div class="footer-logo">
+          <img src="img/footer-logo.png" alt="logo" class="logo">
+        </div>
+
+        <nav class="footer-nav">
+          <ul class="footer-list">
+            <li class="footer-item">
+              <a href="#" class="footer-link">О нас</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Проекты</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Отзывы</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Договор оферты</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Договор подряда</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Конфиденциальность</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Партнёрское соглашение</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a href="#" class="footer-social-link footer-social-icon_facebook"></a>
+          </li>
+
+          <li class="footer-social-item">
+              <a href="#" class="footer-social-link footer-social-icon_vk"></a>
+          </li>
+
+          <li class="footer-social-item">
+              <a href="#" class="footer-social-link footer-social-icon_instagram"></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-section-middle">
+
+        <h2 class="section-heading footer-heading">Оставить заявку</h2>
+
+        <form action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST"
+          class="form footer-writing-form">
+          <input class="input" name="name" type="text" placeholder="Фамилия, имя и отчество*" required>
+          <input class="input" name="E-mail" type="email" placeholder="E-mail*" required>
+          <textarea class="textarea-text" name="message" rows="7" placeholder="Сообщение"></textarea>
+          <div>
+            <button type="submit" class="section-writing-btn">Отправить данные</button>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox__label">Согласен на обработку данных</label>
+          </div>
+        </form>
+
+      </div>
+
+      <div class="footer-section-right">
+        <p class="footer-description">
+          Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта:
+          разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким
+          образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие
+          в формировании стандартных подходов.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

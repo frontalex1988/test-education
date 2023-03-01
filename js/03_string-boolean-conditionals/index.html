@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        'use strict';
+
+        // Задание 1
+        // Цель задания
+        // Практика сложных условий.Научиться искать подстроку внутри строки.
+
+        let password = prompt('Введите пароль', 'iLove/Hate-JS_1988');
+
+        if (password.length >= 4 && (password.includes('-') || password.includes('_'))) {
+            alert('Пароль надёжный');
+        } else {
+            alert('Пароль недостаточно надёжный');
+        }
+
+
+        // Задание 2
+        // Цель задания
+        // Узнать, как преобразовывать строку в верхний / нижний регистр.Узнать, как извлекать произвольные куски из строки.
+
+        let name = prompt('Введите имя', '');
+        let surname = prompt('Введите Фамилию', '');
+
+        let newName = name.substr(0, 1).toUpperCase() + name.substr(1).toLowerCase();
+        let newSurname = surname.substr(0, 1).toUpperCase() + surname.substr(1).toLowerCase();
+
+        let fullNameSurname = newName + ' ' + newSurname;
+        console.log(`Обновлённое имя и обновлённая фамилия ${fullNameSurname}`);
+
+        (newName == name) ? console.log('Имя осталось без изменений') : console.log('Имя было преобразовано');
+
+    </script>
+</body>
+
+</html>

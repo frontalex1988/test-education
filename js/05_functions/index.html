@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    'use strict';
+
+    // Задание
+    // Напишите функцию, которая создаёт массив email - адресов, не попавших в чёрный список.В качестве аргументов функция должна принимать: массив строк с исходными email адресами, массив строк с email адресами в чёрном списке.
+    // В конце файла с кодом домашнего задания напишите конструкцию export default { название функции }, чтобы была возможность автоматической проверки получившейся функции.
+
+    function SearchCleanEMail(arrMail, arrBlackMail) {
+
+      for (let index = 0; index < arrMail.length; index++) {
+
+        if (arrBlackMail.includes(arrMail[index]) !== true) {
+          cleanMail.push(arrMail[index]);
+        }
+      }
+      return console.log(cleanMail);
+    }
+
+    let arrMail = ['abracadabra@mail.ru', 'alex@mail.com', 'barabashka@gmail.com', 'cucumber@gmail.com', 'cavabanha@yandex.ru'];
+    let arrBlackMail = ['barabashka@gmail.com', 'cucumber@gmail.com'];
+    let cleanMail = [];
+
+    SearchCleanEMail(arrMail, arrBlackMail);
+
+    // export default { SearchCleanEMail };
+
+
+    // Задание
+    // Напишите функцию, которая вычисляет и возвращает стоимость корзины товаров после применения всех скидок.В качестве аргументов функция принимает 3 параметра:
+
+    // 1ый вариант
+    function fullCash(basCash, quantity, promokod) {
+
+      if (promokod === 'ДАРИМ300' && basCash < 300) {
+        basCash = 0;
+      }
+      else if (promokod === 'ДАРИМ300') {
+        basCash -= 300;
+      }
+
+      if (quantity >= 10) {
+        basCash *= 0.95;
+      }
+      if (basCash > 50000) {
+        basCash = (basCash - 50000) * 0.8 + 50000;
+      }
+      if (promokod === 'СКИДКА15' && basCash >= 20000) {
+        basCash *= 0.85;
+      }
+      return console.log(`Итоговая стоимость корзины составляет ${basCash} руб.`);
+    }
+
+    fullCash(76000, 5, '');
+
+        // 2oй вариант
+        // function fullCash(basCash, quantity, promokod) {
+
+        //     Cash300(basCash, promokod);
+        //     quantity10(basCash, quantity);
+        //     basCash500000(basCash);
+        //     basCash20000(basCash, promokod);
+
+        //     return console.log(`Итоговая стоимость корзины составляет ${basCash} руб.`);
+        // }
+
+
+        // function Cash300(basCash, promokod) {
+        //     if (promokod === 'ДАРИМ300' && basCash < 300) {
+        //         basCash = 0;
+        //     }
+
+        //     else if (promokod === 'ДАРИМ300') {
+        //         basCash -= 300;
+        //     }
+        //     return console.log(`Общая стоимость корзины составляет ${basCash} руб.`);
+        // }
+
+        // function quantity10(basCash, quantity) {
+        //     if (quantity >= 10) {
+        //         basCash *= 0.95;
+        //         return console.log(`Общая стоимость корзины составляет ${basCash} руб.`);
+        //     }
+        // }
+
+        // function basCash500000(basCash) {
+        //     if (basCash > 50000) {
+        //         basCash = (basCash - 50000) * 0.8 + 50000;
+        //         return console.log(`Общая стоимость корзины составляет ${basCash} руб.`);
+        //     }
+        // }
+
+        // function basCash20000(basCash, promokod) {
+        //     if (promokod === 'СКИДКА15' && basCash >= 20000) {
+        //         basCash *= 0.85;
+        //         return console.log(`Общая стоимость корзины составляет ${basCash} руб.`);
+        //     }
+        // }
+
+        // fullCash(76000, 2, '');
+
+  </script>
+</body>
+
+</html>
